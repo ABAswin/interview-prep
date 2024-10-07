@@ -31,10 +31,10 @@ func rangeSum(n *Node, low, high int) int {
 
 	fmt.Println("Node value ", n.Val)
 	if n.Val > low {
-		sum = rangeSum(n.Left, low, high)
+		sum += rangeSum(n.Left, low, high)
 	}
 	if n.Val < high {
-		sum = rangeSum(n.Right, low, high)
+		sum += rangeSum(n.Right, low, high)
 	}
 	if n.Val >= low && n.Val <= high {
 		fmt.Println("Add Node value ", n.Val)
