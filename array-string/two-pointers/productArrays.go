@@ -32,14 +32,10 @@ high--}
 */
 package main
 
-import (
-	"fmt"
-)
-
-func main() {
-	fmt.Println(productArrays([]int{2, 5, 3, 10}, 30))
-	fmt.Println(productArrays([]int{8, 2, 6, 5}, 50))
-}
+// func main() {
+// 	fmt.Println(productArrays([]int{2, 5, 3, 10}, 30))
+// 	fmt.Println(productArrays([]int{8, 2, 6, 5}, 50))
+// }
 
 // func productArraysNonContigous(a []int, target int) [][]int {
 // 	res := make([][]int, 0)
