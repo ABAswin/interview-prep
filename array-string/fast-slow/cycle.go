@@ -1,23 +1,21 @@
 // find out if a linked list is cycle or not
 package main
 
-import "fmt"
+// type Node struct {
+// 	Val  int
+// 	Next *Node
+// }
 
-type Node struct {
-	Val  int
-	Next *Node
-}
+// type LL struct {
+// 	Head *Node
+// }
 
-type LL struct {
-	Head *Node
-}
+// func main() {
 
-func main() {
+// 	ll := &LL{Head: &Node{Val: 1, Next: &Node{Val: 2, Next: &Node{Val: 3, Next: nil}}}}
+// 	fmt.Println(isCycle(ll.Head))
 
-	ll := &LL{Head: &Node{Val: 1, Next: &Node{Val: 2, Next: &Node{Val: 3, Next: nil}}}}
-	fmt.Println(isCycle(ll.Head))
-
-}
+// }
 
 func isCycle(node *Node) bool {
 

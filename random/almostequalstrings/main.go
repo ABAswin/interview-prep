@@ -60,6 +60,7 @@ func checkAlmostEqual(numberOfStrings int, a []string, b []string) string {
 		mb := make(map[string]int, len(b[k]))
 		for i := 0; i < len(a[k]); i++ {
 			ma[string(a[k][i])]++
+			// this can be optimised by using same map and subtracting when same character is found
 			mb[string(b[k][i])]++
 		}
 		fmt.Println("values of ma,mb", ma, mb)
