@@ -13,16 +13,17 @@ Explanations: Here are the steps to find out that 23 is a happy number:
 
 
  10201923
+
 */
 
 package main
 
 import "fmt"
 
-func main() {
-	//fmt.Println(isMagic(23))
-	fmt.Println(isMagic(12))
-}
+// func main() {
+// 	//fmt.Println(isMagic(23))
+// 	fmt.Println(isMagic(12))
+// }
 
 func isMagic(n int) bool {
 	ma := make(map[int]int, 0)

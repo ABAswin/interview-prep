@@ -1,13 +1,13 @@
 package main
 
-type Node struct {
-	Val  int
-	Next *Node
-}
+// type Node struct {
+// 	Val  int
+// 	Next *Node
+// }
 
-type LL struct {
-	Head *Node
-}
+// type LL struct {
+// 	Head *Node
+// }
 
 /*
 1 2 3 4

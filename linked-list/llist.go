@@ -4,19 +4,19 @@ import (
 	"fmt"
 )
 
-type Node struct {
+type Node1 struct {
 	Data int
-	Next *Node
+	Next *Node1
 }
 
 type List struct {
-	Head *Node
+	Head *Node1
 }
 
 func (l *List) insert(val int) {
 	// var temp Node
 	// temp.Data = val
-	temp := &Node{Data: val}
+	temp := &Node1{Data: val}
 	//fmt.Printf("address of temp %p\n", temp)
 	if l.Head == nil {
 		fmt.Print("Setting head\n")
@@ -64,18 +64,18 @@ func (l *List) delete(val int) {
 
 }
 
-func main() {
+// func main() {
 
-	l := &List{}
-	l.insert(1)
-	fmt.Printf("after inserting 1 %p\n", l.Head)
-	l.print()
-	l.insert(2)
-	l.print()
-	l.insert(2)
-	l.insert(2)
-	l.insert(2)
-	l.insert(2)
+// 	l := &List{}
+// 	l.insert(1)
+// 	fmt.Printf("after inserting 1 %p\n", l.Head)
+// 	l.print()
+// 	l.insert(2)
+// 	l.print()
+// 	l.insert(2)
+// 	l.insert(2)
+// 	l.insert(2)
+// 	l.insert(2)
 
-	l.print()
-}
+// 	l.print()
+// }
