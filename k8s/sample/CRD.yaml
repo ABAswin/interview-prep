@@ -1,0 +1,59 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: foos.example.com # Plural.group
+spec:
+  group: example.com # API group
+  versions:
+    - name: v1 # API version
+      served: true # This version is served
+      storage: true # This version is the storage version
+      schema: # Schema definition for the custom resource
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec: # Specification of the resource
+              type: object
+              properties:
+                name: # Example field: Name of the Foo
+                  type: string
+                replicas: # Example field: Number of replicas
+                  type: integer
+                  minimum: 0
+                image: # Example field: Container image
+                  type: string
+              required: # Required fields in the spec
+                - name
+                - image
+            status: # Status of the resource (usually updated by a controller)
+              type: object
+              properties:
+                availableReplicas: # Example field: Number of available replicas
+                  type: integer
+                conditions: # Example field: Conditions of the resource
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      type:
+                        type: string
+                      status:
+                        type: string
+                      lastTransitionTime:
+                        type: string
+                        format: date-time
+                      reason:
+                        type: string
+                      message:
+                        type: string
+                    required:
+                      - type
+                      - status
+                      - lastTransitionTime
+  scope: Namespaced # Scope of the CRD (Namespaced or Cluster)
+  names:
+    plural: foos # Plural name of the resource
+    singular: foo # Singular name of the resource
+    kind: Foo # Kind of the resource (PascalCase)
+    shortNames: # Short names for the resource
+      - fo

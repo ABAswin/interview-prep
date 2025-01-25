@@ -1,0 +1,8 @@
+apiVersion: example.com/v1 # group/version
+kind: Foo # Kind
+metadata:
+  name: my-foo # Name of the Foo resource
+spec:
+  name: "My Foo Instance"
+  replicas: 3
+  image: "nginx:latest"
